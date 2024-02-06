@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Messages</h2>
+
+<mat-dialog-content>
+  <div class="messages">
+    @for (message of messages(); track $index) {
+      <div class="message">
+        <div class="text">{{ message.text }}</div>
+        <div class="date">{{ message.date | date: 'short' }}</div>
+      </div>
+    } @empty {
+      <div class="empty">No messages yet</div>
+    }
+  </div>
+
+  <form ngNoForm>
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <input
+        #newMessageTextInput
+        matInput
+        required
+        cdkFocusInitial
+        [(ngModel)]="newMessageText"
+      />
+      @if (!newMessageText) {
+        <mat-error>Message is required</mat-error>
+      }
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      (click)="addMessage()"
+      [disabled]="!newMessageText"
+    >
+      Save
+    </button>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Close</button>
+</mat-dialog-actions>

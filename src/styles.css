@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(227, 255, 248, 0) 82.08%,
+    rgba(227, 255, 248, 0.38) 100%
+  );
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Mulish;
+  src: url(./assets/Mulish-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url(./assets/DMSans-VariableFont_opsz,wght.ttf) format('truetype');
+}

@@ -1,0 +1,5 @@
+::ng-deep router-outlet ~ *:not(app-footer) {
+  display: block;
+  padding-top: 114px; /* header height */
+  min-height: calc(100dvh - 51px - 114px);
+}

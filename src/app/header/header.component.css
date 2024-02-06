@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 120px 24px 120px;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 120px * 2);
+  background-color: white;
+}
+
+.logo {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #89c5cc;
+}
+
+nav {
+  display: flex;
+  gap: 48px;
+}
+
+nav a {
+  font-family: Mulish;
+  font-size: 18px;
+  line-height: 23px;
+  color: black;
+  opacity: 50%;
+  text-decoration: inherit;
+}
+
+nav a.active {
+  font-weight: 700;
+  opacity: 100%;
+  font-weight: 700;
+}
